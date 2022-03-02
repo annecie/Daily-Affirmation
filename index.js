@@ -27,26 +27,27 @@ const displayAffirmation = (response) => {
   affirmationItem.innerText = response.affirmation
 }
 
-const texts = document.querySelector(".text-bar");
 
-let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// const texts = document.querySelector(".text-bar");
 
-const recognition = new SpeechRecognition();
-recognition.interimResults = true;
+// let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-let p = document.createElement("p");
+// const recognition = new SpeechRecognition();
+// recognition.interimResults = true;
 
-recognition.addEventListener("result", (e) => {
-  texts.appendChild(p);
-  const text = Array.from(e.results)
-    .map((result) => result[0])
-    .map((result) => result.transcript)
-    .join("");
-    p.innerText = text;
-});
-recognition.addEventListener("end", () => {
-    recognition.start();
-  });
+// let p = document.createElement("p");
+
+// recognition.addEventListener("result", (e) => {
+//   texts.appendChild(p);
+//   const text = Array.from(e.results)
+//     .map((result) => result[0])
+//     .map((result) => result.transcript)
+//     .join("");
+//     p.innerText = text;
+// });
+// recognition.addEventListener("end", () => {
+//     recognition.start();
+//   });
   
-  recognition.start();
+//   recognition.start();
 
