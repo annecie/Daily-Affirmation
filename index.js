@@ -1,3 +1,32 @@
+
+const affirmationItem = document.getElementById("affirmation-item")
+const button = document.getElementById("button")
+
+// Fetch Api
+const requestOptions = {
+  method: "GET",
+  headers: {
+    "Accept": "application/json"
+  }
+};
+
+button.addEventListener("click", () => {
+    getAffirmation();
+    displayAffirmation();
+})
+
+const getAffirmation = () => {
+ fetch("https://www.affirmations.dev", requestOptions)
+  .then(response => response.json())
+  .then(displayAffirmation)
+  .catch(error => console.log("error", error));
+}
+
+const displayAffirmation = (response) => {
+  // console.log(response.affirmation)
+  affirmationItem.innerText = response.affirmation
+}
+
 const texts = document.querySelector(".text-bar");
 
 let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -20,3 +49,4 @@ recognition.addEventListener("end", () => {
   });
   
   recognition.start();
+
