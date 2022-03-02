@@ -1,5 +1,6 @@
-# Recipe-Application
-<strong> A webpage where users can get recipe ideas.</strong>
+# Daily-Affirmation-Application
+<strong> A webpage where you can get your daily affirmations by saying ‘get affirmation’ to get your affirmation to show up on screen as well as read out loud to you.
+.</strong>
 <h1>Team</h1>
-Liam Reboseno
+ Liam Reboseno
 <br>Annecie Jean Baptiste</br>
