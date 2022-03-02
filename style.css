@@ -48,17 +48,6 @@
   .texts p.replay {
     text-align: right;
   }
-  
-    background-color:rgb(119, 173, 173);
-  }
-  
-  .container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* justify-content: center; */
-  }
-
   .text-bar{
     color: black;
     text-align: left;
