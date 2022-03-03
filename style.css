@@ -1,32 +1,42 @@
 * {
-    padding: 0;
+  padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-image:url(background\ image.jpg);
+}
+
+body {
+    background-color: #d7ceb2;
+  /* background-image:url(background\ image.jpg);
     background-size: cover;
-    background-attachment:fixed;
-    margin: 0;
-    padding: 0;
-  }
+    background-attachment:fixed; */
+   text-align: center;
+}
 
-  .page-top {
-    color: rgb(66, 179, 109);
-    text-align: center;
-    font-size: 50px;
-  }
-  #button{
-    padding: 10px;
-    font-size: large;
-  }
-  .container {
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 11%;
-    display: flex;
-    justify-content: center;
-  }
+.container-sm {
+  background-color: #93a8ac !important;
+  border: solid #4c5760 1px;
+  width: 50%;
+}
 
-  
+.container-md {
+background-color: #93a8ac;
+  margin-top: 10%;
+  width: 70%;
+}
 
-  
+.container-lg {
+ margin-top: 3%;
+}
+
+.btn {
+margin: auto;
+  background-color: #a59e8c;
+  border-color: #a59e8c;
+  color: black;
+  font-weight: 500;
+}
+
+#affirmation {
+  font-weight: 600;
+  font-size: 25px;
+}
