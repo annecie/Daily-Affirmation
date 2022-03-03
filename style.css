@@ -6,22 +6,23 @@
 
 body {
     background-color: #d7ceb2;
-  /* background-image:url(background\ image.jpg);
+  background-image:url(new-background.jpg);
     background-size: cover;
-    background-attachment:fixed; */
+    background-attachment:fixed;
    text-align: center;
 }
 
 .container-sm {
-  background-color: #93a8ac !important;
-  border: solid #4c5760 1px;
+  background-color: transparent!important;
+  /* border: solid #4c5760 1px; */
   width: 50%;
 }
 
 .container-md {
-background-color: #93a8ac;
+/* background-color: lightpink; */
   margin-top: 10%;
   width: 70%;
+  /* opacity: 0.4; */
 }
 
 .container-lg {
