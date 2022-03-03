@@ -41,11 +41,30 @@ const displayGiphy = (content) => {
   affirmationContainer.append(img)
 }
 
-// const texts = document.querySelector(".text-bar");
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const speechButton = document.querySelector("#speech-button");
 
-// let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+recognition.lang = 'en-US';
+recognition.continuous = false;
 
-// const recognition = new SpeechRecognition();
+speechButton.addEventListener("click", () => {
+  console.log("start")
+  recognition.start();
+
+});
+
+recognition.onresult = function(event) {
+  console.log(event);
+}
+
+recognition.onspeechend = function() {
+  console.log("end")
+  recognition.stop();
+}
+
+
+
 // recognition.interimResults = true;
 
 // let p = document.createElement("p");
@@ -58,9 +77,4 @@ const displayGiphy = (content) => {
 //     .join("");
 //     p.innerText = text;
 // });
-// recognition.addEventListener("end", () => {
-//     recognition.start();
-//   });
-  
-//   recognition.start();
-
+// r
