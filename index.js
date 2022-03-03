@@ -26,9 +26,9 @@ const displayAffirmation = (response) => {
   // console.log(response.affirmation)
   affirmationItem.innerText = response.affirmation
 }
+// voice-recognition
 
-
-// const texts = document.querySelector(".text-bar");
+// const texts = document.querySelector(".texts");
 
 // let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
