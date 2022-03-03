@@ -1,6 +1,7 @@
 const affirmationItem = document.getElementById("affirmation")
 const button = document.getElementById("button")
 const affirmationContainer = document.getElementById("affirmation-container")
+const img = document.getElementById("image")
 
 const requestOptions = {
   method: "GET",
@@ -35,7 +36,7 @@ const getGiphy = () => {
 
 const displayGiphy = (content) => {
   // console.log(content.data.images.original.url)
-  const img = document.createElement("img")
+  // const img = document.createElement("img")
   img.src = content.data.images.original.url
   affirmationContainer.append(img)
 }
