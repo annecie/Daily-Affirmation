@@ -11,6 +11,7 @@ const requestOptions = {
 };
 
 button.addEventListener("click", () => {
+    speechButton.disabled = "true"
     getAffirmation();
     getGiphy();
 })
@@ -42,39 +43,31 @@ const displayGiphy = (content) => {
 }
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const speechButton = document.querySelector("#speech-button");
+const speechButton = document.getElementById("speech-button");
+const speechResult = document.getElementById("speech-result");
+let speechItem = document.createElement("p")
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'en-US';
 recognition.continuous = false;
 
 speechButton.addEventListener("click", () => {
+  button.disabled = "true"
   console.log("start")
   recognition.start();
-
 });
 
 recognition.onresult = function(event) {
-  console.log(event);
+  // console.log(event)
+  speechItem = event.results[0][0].transcript
+  if(speechItem === "get affirmation" || "affirmation"){
+    console.log("affirmation success")
+    getAffirmation();
+    getGiphy();
+  }
 }
 
 recognition.onspeechend = function() {
   console.log("end")
   recognition.stop();
 }
-
-
-
-// recognition.interimResults = true;
-
-// let p = document.createElement("p");
-
-// recognition.addEventListener("result", (e) => {
-//   texts.appendChild(p);
-//   const text = Array.from(e.results)
-//     .map((result) => result[0])
-//     .map((result) => result.transcript)
-//     .join("");
-//     p.innerText = text;
-// });
-// r
