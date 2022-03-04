@@ -1,47 +1,94 @@
 * {
   padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #d7ceb2;
-  background-image:url(new-background.jpg);
-    background-size: cover;
-    background-attachment:fixed;
-   text-align: center;
+background-color: #d7ceb2;
+background-image:url(new-background.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+text-align: center;
+}
+
+h1{
+font-family: 'Berkshire Swash', cursive;
+font-family: 'Dancing Script', cursive;
+}
+
+.h5{
+font-family: 'Montserrat Alternates', sans-serif;
+font-weight: 600 !important;
+border-top: black solid 2px;
 }
 
 .container-sm {
-  background-color: transparent!important;
-  /* border: solid #4c5760 1px; */
-  width: 50%;
+background-color: lavender!important;
+width: 50%;
+-webkit-animation: fadein 2s;
+animation: fadein 2s;
 }
 
 .container-md {
-/* background-color: lightpink; */
-  margin-top: 10%;
-  width: 70%;
-  /* opacity: 0.4; */
+margin-top: 5%;
+background-color: lavender !important;
+width: 70%;
+height: 50%;
+opacity: 0.9;
+position: relative;
+z-index: -1 !important;
 }
 
 .container-lg {
- margin-top: 3%;
+margin-top: 2%;
 }
 
 .btn {
 margin: auto;
-  background-color: #a59e8c;
-  border-color: #a59e8c;
-  color: black;
-  font-weight: 500;
+background-color: lavender;
+border-color: #e34d82  !important;
+color: black;
+font-weight: 500;
+}
+
+.btn:hover{
+background-color: #e34d82 !important;
 }
 
 #affirmation {
-  font-weight: 600;
-  font-size: 25px;
+font-family: 'Noto Serif Display', serif;
+font-weight: 600;
+font-size: 25px;
 }
 
 #speech-button {
-  border: none;
+border: none;
+}
+
+img {
+height: 60%;
+width: 60%;
+}
+
+.btn-group {
+border-color: #e34d82 !important;
+}
+
+#affirmation-container {
+display: none;
+}
+
+.ml16 {
+color: #402d2d;
+font-weight: 800;
+font-size: 2em;
+text-transform: uppercase;
+letter-spacing: 0.2em;
+overflow: hidden;
+}
+
+.ml16 .letter {
+display: inline-block;
+line-height: 1em;
 }
