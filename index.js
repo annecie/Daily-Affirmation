@@ -122,20 +122,20 @@ recognition.lang = 'en-US';
 recognition.continuous = false;
 
 speechButton.addEventListener("click", () => {
+  button.disabled = "true"
   console.log("start")
   recognition.start();
 });
 
 recognition.onresult = function(event) {
-  // console.log(event.results[0][0].transcipt)
+  console.log(event.results[0][0].transcript)
   speechItem = event.results[0][0].transcript
+  instructionContainer.style.display = "none";
+  affirmationContainer.style.display = "block";
   if(speechItem === "get affirmation" || "affirmation"){
     console.log("affirmation success")
     getAffirmation();
     getGiphy();
-  }
-  if(speechItem.includes("Open Spotify")){
-    window.open("https://open.spotify.com/")
   }
 }
 
